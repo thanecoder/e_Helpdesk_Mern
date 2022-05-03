@@ -10,11 +10,11 @@ const users = require('./routes/userRoutes');
 const tickets = require('./routes/ticketRoutes.js');
 
 
-dotenv.config({path:path.resolve(__dirname, './config/config.env')})
+dotenv.config({ path: path.resolve(__dirname, './config/config.env') })
 const PORT = process.env.PORT || 5000;
 const app = express();
 app.use(express.json());
-app.use(express.urlencoded({extended:false}))
+app.use(express.urlencoded({ extended: false }))
 app.use(morgan('dev'))
 connectDB();
 
@@ -26,8 +26,8 @@ app.use('/ehelpdesk/tickets', tickets);
 app.use(errorHandler);
 
 app.listen(
-    PORT,
-    console.log(
-      `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
-    )
+  PORT,
+  console.log(
+    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
+  )
 );

@@ -5,19 +5,19 @@
 }
 
 @font-face {
-  font-family: 'Lato';
-  src: local('Lato-Bold'), local('Lato-Bold'),
-    url('../src/assets/fonts/Lato/Lato-Bold.ttf') format('truetype');
+  font-family: "Lato";
+  src: local("Lato-Bold"), local("Lato-Bold"),
+    url("../src/assets/fonts/Lato/Lato-Bold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Lato-Light';
-  src: local('Lato-Light'), local('Lato-Light'),
-    url('../src/assets/fonts/Lato/Lato-Light.ttf') format('truetype');
+  font-family: "Lato-Light";
+  src: local("Lato-Light"), local("Lato-Light"),
+    url("../src/assets/fonts/Lato/Lato-Light.ttf") format("truetype");
 }
 
 body {
-  font-family: 'Lato', Helvetica, sans-serif;
+  font-family: "Lato", Helvetica, sans-serif;
   height: 100vh;
 }
 
@@ -86,7 +86,7 @@ h3 {
 }
 
 .heading {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 50px;
   padding: 0 20px;
