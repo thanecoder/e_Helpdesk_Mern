@@ -10,6 +10,12 @@
     url('../src/assets/fonts/Lato/Lato-Bold.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Lato-Light';
+  src: local('Lato-Light'), local('Lato-Light'),
+    url('../src/assets/fonts/Lato/Lato-Light.ttf') format('truetype');
+}
+
 body {
   font-family: 'Lato', Helvetica, sans-serif;
   height: 100vh;
