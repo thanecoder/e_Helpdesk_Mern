@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import { useDispatch, useSelector } from 'react-redux'
 import { authActions, register } from "../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
-
+import Spinner from '../components/Spinner';
 
 
 const Register = () => {
@@ -32,8 +32,7 @@ const Register = () => {
             navigate('/');
         }
         dispatch(authActions.reset());
-    }, [isError, isSuccess, user])
-
+    }, [isError, isSuccess, user, navigate, dispatch])
 
     const formControlChangeHandler = (event) => {
         setFormData((prevState) => ({
@@ -56,6 +55,10 @@ const Register = () => {
             dispatch(register(userData));
         }
     };
+
+    if (isLoading) {
+        return <Spinner />
+    }
 
     return (
         <>

@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { useDispatch, useSelector } from 'react-redux'
 import { authActions, login } from "../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
+import Spinner from "../components/Spinner";
 
 const Login = () => {
     const [formData, setFormData] = useState({
@@ -43,7 +44,11 @@ const Login = () => {
             navigate('/');
         }
         dispatch(authActions.reset());
-    }, [isError, isSuccess, user])
+    }, [isError, isSuccess, user, navigate, dispatch])
+
+    if (isLoading) {
+        return <Spinner />
+    }
 
     return (
         <>
